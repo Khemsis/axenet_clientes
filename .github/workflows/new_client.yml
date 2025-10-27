@@ -2,17 +2,10 @@ name: New Client Notification
 
 on:
   workflow_dispatch:
-    inputs:
-      cliente:
-        description: "Nombre del cliente"
-        required: true
-      usuario:
-        description: "Usuario que crea el cliente"
-        required: true
 
 jobs:
-  notify:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Notify Team
-        run: echo "NEW CLIENT CREATED: ${{ github.event.inputs.cliente }}. Notifying team: ${{ github.event.inputs.usuario }}, Colaborador1, Colaborador2."
+      - name: Run simple notification
+        run: echo "NEW CLIENT CREATED. Notification executed successfully."
