@@ -2,19 +2,10 @@ name: Client Update Notification
 
 on:
   workflow_dispatch:
-    inputs:
-      cliente:
-        description: "Nombre del cliente actualizado"
-        required: true
-      usuario:
-        description: "Usuario que actualiza el cliente"
-        required: true
 
 jobs:
-  notify:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Notify Team
-        run: |
-          echo "CLIENT UPDATED: ${{ github.event.inputs.cliente }}"
-          echo "Notifying team: ${{ github.event.inputs.usuario }}, Colaborador1, Colaborador2."
+      - name: Run simple notification
+        run: echo "CLIENT UPDATED. Notification executed successfully."
