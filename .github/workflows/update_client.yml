@@ -15,4 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Notify Team
-        run: echo "CLIENT UPDATED: ${{ github.event.inputs.cliente }}. Notifying team: ${{ github.event.inputs.usuario }}, Colaborador1, Colaborador2."
+        run: |
+          echo "CLIENT UPDATED: ${{ github.event.inputs.cliente }}"
+          echo "Notifying team: ${{ github.event.inputs.usuario }}, Colaborador1, Colaborador2."
