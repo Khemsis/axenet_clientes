@@ -1,13 +1,15 @@
 name: New Client Notification
+
 on:
   workflow_dispatch:
     inputs:
       cliente:
-        description: 'Nombre del cliente'
+        description: "Nombre del cliente"
         required: true
       usuario:
-        description: 'Usuario que crea el cliente'
+        description: "Usuario que crea el cliente"
         required: true
+
 jobs:
   notify:
     runs-on: ubuntu-latest
